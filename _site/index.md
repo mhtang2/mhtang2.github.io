@@ -1,6 +1,6 @@
 ## Simple GUI to read packets while marking buzzes and bonuses
-<img src ="res/stats1.png" width="75%">
-<img src ="res/bonus.png" width="75%">
+<center><img src ="res/stats1.png" width="75%"></center>
+<center><img src ="res/bonus.png" width="75%"></center>
 
 ## Easily generate round by round stats in human readable Excel files
 - Buzzpoints in cDepth
