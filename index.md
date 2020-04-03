@@ -17,13 +17,14 @@
 
 ## Comprehensive tournament stats compilation
 - Every recorded buzz from every round
-- Teams ranked by *every* category
+- Teams and Players ranked by *every* category
 	- Which team had the highest PPB in Literature?
 	- What about American Lit?
-- Players ranked by *every* category
 - Tossup and Bonus converion rates on every question
 	- How many rooms bageled bonus 6 from Round 1?
 	- How many rooms went dead on tossup 10 from Round 4?
+	- What percentage of Myth tossups were powered?
+	- What percentage of Sports bonuses were bageled?
 
 
 ### Conversion spreadsheet
