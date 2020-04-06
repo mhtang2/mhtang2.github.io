@@ -40,3 +40,4 @@
 - Apache POI and Apache PDFBox for processing
 - Apache HTTPClient, Node.js, and LowDB for server-client communication for lisencing
 - Java Swing for GUI
+### You only need to have a Java version ≥ 8 to run this program 
