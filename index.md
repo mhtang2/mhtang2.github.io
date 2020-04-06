@@ -33,3 +33,10 @@
 ![statsPPTUH](res/statsPPTUH.png)
 ### Spreadsheet of all buzzes
 ![allbuzz](res/allbuzz.png)
+
+## About the program
+
+### The program is written in Java 8 and uses
+- Apache POI and Apache PDFBox for processing
+- Apache HTTPClient, Node.js, and LowDB for server-client communication for lisencing
+- Java Swing for GUI
