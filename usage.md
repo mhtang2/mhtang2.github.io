@@ -9,7 +9,7 @@
 
 - Add question number followed by a period and a space before each tossup and bonus.
 	- e.g. "1. This author of..."
-	- **Highly recommend not bolding this part** it may lead to inconsistencies 
+	- **Highly recommend not bolding the question number and period** it may lead to inconsistencies 
 - Add "[10]" before each bonus part, and add "ANSWER: " before each answer to a bonus part.
 - Make sure there are only two sections, with the tossup section preceding the bonus.
 
