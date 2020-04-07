@@ -3,7 +3,7 @@
 # Packet formatting
 - **This must be correct, or the program may not work**
 - Packet formatting using HFT format check examplepacket.pdf
-- Ensure to include author of questions in < angled brackets > after each tossup and bonus. 
+- Be sure to include author of questions in < angled brackets > after each tossup and bonus. 
 	- Even if there is no author, including a pair of empty brackets <> is recommended. 
 - If you choose to include category data, add them in this format {Category, Subcategory} or {Category} after the < author data >
 
