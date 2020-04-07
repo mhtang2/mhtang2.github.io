@@ -11,6 +11,7 @@
 	- e.g. "1. This author of..."
 	- **Highly recommend not bolding the question number and period** it may lead to inconsistencies 
 - Add "[10]" before each bonus part, and add "ANSWER: " before each answer to a bonus part.
+	- Please don't bold these either
 - Make sure there are only two sections, with the tossup section preceding the bonus.
 
 - During data processing, player names and team names must be consistent over rounds and packets, otherwise they will be treated as different players/teams 
