@@ -1,5 +1,6 @@
 ## Combining score keeping and moderating with simple GUI
 <center><img src ="res/stats1.png" width="75%"><img src ="res/bonus.png" width="75%"></center>
+
 ![res1](res/stats1.png)
 ![res2](res/bonus.png)
 
