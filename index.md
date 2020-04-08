@@ -1,5 +1,5 @@
 ## Combining score keeping and moderating with simple GUI
-<center><p><img src ="res/stats1.png" width="50%"><img src ="res/bonus.png" width="50%"></p></center>
+<center><p><img src ="res/stats1.png" width="51%"><img src ="res/bonus.png" width="50%"></p></center>
 
 ## Easily generate round by round stats in human readable Excel files
 - Buzzpoints in cDepth
