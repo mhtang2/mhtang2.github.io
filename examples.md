@@ -1,6 +1,6 @@
 # Moderator tutorial:
 
- <iframe width="500" height="800px"
+ <iframe width="800" height="500"
 src="https://www.youtube.com/embed/WBbftg8zg1w" 
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
