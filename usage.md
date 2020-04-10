@@ -24,14 +24,13 @@
 # Compiling round stats into Tournament Summary
 Please **do not edit** any part of the Excel files generated after each round! The program reads them to generate the Tournament Summary, so do not edit any Excel files until after you have compiled the Tournament Summary. Feel free to make a copy though and edit that as you like :)
 
-
 To generate the Tournament Summary, send all the round files to one moderator (Google Drive?) and hit the "Total Summary Tool" button
 
 # Program files
-**lisence.bin**, **config.ini**, and **teams.txt** need to be kept in the same folder as the program
+**license.bin**, **config.ini**, and **teams.txt** need to be kept in the same folder as the program
 
 # Configuration
-**lisence.bin** links the program to _your_ computer. **Don't lose or edit it!** or your program will require another key
+**license.bin** links the program to _your_ computer. **Don't lose or edit it!** or your program will require another key
 
 **config.ini** decides the point values of Powers, Correct buzzes, and Negs. It has three lines:
 ```
