@@ -1,9 +1,8 @@
 # Setup
 title: Not Pure Poole
-tagline: A simple, beautiful, and powerful blog theme
+description: A simple, beautiful, and powerful Jekyll theme for blogs
 url: https://vszhub.github.io
 paginate: 1
-baseurl: "/not-pure-poole"
 permalink: pretty
 
 # Gems
