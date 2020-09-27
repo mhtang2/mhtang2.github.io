@@ -5,7 +5,12 @@
 
 .page,
 .post {
+  font-family: var(--text-font);
   margin-bottom: 4em;
+
+  h1, h2, h3, h4, h5, h6, .post-meta {
+    font-family: var(--body-font);
+  }
 
   li + li {
     margin-top: .25rem;

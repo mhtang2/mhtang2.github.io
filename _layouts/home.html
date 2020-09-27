@@ -4,7 +4,7 @@ layout: default
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post">
+  <section>
     <h2 class="post-title">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
@@ -14,7 +14,7 @@ layout: default
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-meta">{{ post.date | date_to_string }}</time>
 
     {{ post.excerpt }}
-  </article>
+  </section>
   {% endfor %}
 </div>
 
