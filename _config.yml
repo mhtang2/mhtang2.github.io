@@ -1,9 +1,9 @@
 # Setup
-title: Poole
-tagline: The Jekyll Butler
-url: https://getpoole.com
+title: Not Pure Poole
+tagline: A simple, beautiful, and powerful blog theme
+url: https://vszhub.github.io
 paginate: 1
-baseurl: ""
+baseurl: "/not-pure-poole"
 permalink: pretty
 
 # Gems
@@ -11,6 +11,8 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 
 # Optimize Jekyll
 exclude:
@@ -33,9 +35,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Songzi Vong
+  url: https://github.com/vszhub/
+  email: vszhub@gmail.com
 
 # Custom vars
-version: 3.0.0
+version: 0.1.0
