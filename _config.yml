@@ -23,6 +23,19 @@ exclude:
   - LICENSE.md
   - README.md
 
+# Optimize Jekyl SEO Tag
+twitter:
+  username: vszhub
+  card: summary
+logo: logo.png
+social:
+  name: Songzi Vong
+  links:
+    - https://twitter.com/vszhub
+    - https://github.com/vszhub
+google_site_verification: xxxxx
+lang: en
+
 sass:
   sass_dir: _sass
   style: :compressed
@@ -37,6 +50,3 @@ author:
   name: Songzi Vong
   url: https://github.com/vszhub/
   email: vszhub@gmail.com
-
-# Custom vars
-version: 0.1.0
