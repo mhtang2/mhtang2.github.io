@@ -15,6 +15,7 @@ See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-p
   - [Customizing Head](#customizing-head)
   - [Creating Themes](#creating-themes)
   - [Customizing Navigation](#customizing-navigation)
+  - [Something More](#something-more)
 - [Development](#development)
 - [License](#license)
 
@@ -95,6 +96,10 @@ You can create a file `_data/navigation.yml` to configure links to some pages. F
 - title: About
   url: /about/
 ```
+
+### Something More
+
+Just **hack** into the code and see what you can get.
 
 ## Development
 
