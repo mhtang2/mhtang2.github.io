@@ -6,7 +6,7 @@ layout: default
   {% for post in paginator.posts %}
   <section>
     <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">
+      <a onclick="sessionStorage.setItem('needScroll', 'true')" href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </h2>

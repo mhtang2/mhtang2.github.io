@@ -3,14 +3,67 @@
 // Styles for managing the structural hierarchy of the site.
 
 .container {
-  max-width: 45rem;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  padding-top: var(--spacer-2);
   padding-left: var(--spacer-2);
   padding-right: var(--spacer-2);
   margin-left:  auto;
   margin-right: auto;
+  min-height: 100vh;
+}
+
+.sidebar-left {
+  display: flex;
+  padding: var(--spacer);
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-color);
+  height: 100vh;
 }
 
 footer {
   margin-top: var(--spacer-3);
   margin-bottom: var(--spacer-3);
+}
+
+@media (min-width: 48rem) {
+  .content {
+    padding-top: var(--spacer-3);
+    padding-left: var(--spacer-3);
+    padding-right: var(--spacer-3);
+    margin-left: 25%;
+  }
+
+  .sidebar-left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .sidebar-right {
+    display: block;
+  }
+}
+
+@media (max-width: 60rem) {
+  .sidebar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 60rem) {
+  .content {
+    width: 75%;
+  }
 }

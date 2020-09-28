@@ -5,35 +5,66 @@
 
   <body>
 
-    <div class="container content">
-      <header class="masthead">
-        <div class="masthead-title">
-          <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
-          <small>{{ site.description }}</small>
-        </div>
-      </header>
+    <div class="container pure-g">
+      <div class="sidebar-left pure-u-1 pure-u-md-1-4">
+        <header class="masthead">
+          <div class="masthead-title">
+            <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
+          </div>
+          <div class="masthead-tagline">
+            <small>{{ site.description }}</small>
+          </div>
+          {%- if site.data.navigation -%}
+            <nav class="navigation">
+              <ul class="navigation-list">
+                {%- for nav in site.data.navigation -%}
+                  <li class="navigation-item">
+                    <a onclick="sessionStorage.setItem('needScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+        </header>
+      </div>
+      <div class="content pure-u-1 pure-u-md-1-2">
+        <main>
+          {{ content }}
+        </main>
+  
+        <footer class="footer">
+          {%- assign year_from = site.posts[-1].date | date: '%Y' -%}
+          {%- assign year_to   = site.time | date: '%Y' -%}
+          {%- if year_from == nil or year_from == year_to -%}
+            {%- assign year_string = year_from -%}
+          {%- else -%}
+            {%- assign year_string = year_from | append: '&nbsp;' | append: '-' | append: '&nbsp;' | append: year_to -%}
+          {%- endif -%}
+          <small>
+            &copy; {{ year_string }} {% if site.author %}<a href="{{ site.author.url }}">{{ site.author.name }}</a>{% endif %}. All rights reserved.
+            Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
+          </small>
+        </footer>
+      </div>
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
 
-      <main>
-        {{ content }}
-      </main>
-
-      <footer class="footer">
-        {%- assign year_from = site.posts[-1].date | date: '%Y' -%}
-        {%- assign year_to   = site.time | date: '%Y' -%}
-        {%- if year_from == nil or year_from == year_to -%}
-          {%- assign year_string = year_from -%}
-        {%- else -%}
-          {%- assign year_string = year_from | append: '&nbsp;' | append: '-' | append: '&nbsp;' | append: year_to -%}
-        {%- endif -%}
-        <small>
-          &copy; {{ year_string }} {% if site.author %}<a href="{{ site.author.url }}">{{ site.author.name }}</a>{% endif %}. All rights reserved.
-          Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
-        </small>
-      </footer>
+      </div>
     </div>
 
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
+
+    <script>
+      const needScroll = sessionStorage.getItem('needScroll');
+      if (window.matchMedia('(max-width: 48rem)').matches && needScroll == 'true') {
+        window.scrollTo({
+          left: 0, 
+          top: window.innerHeight,
+          behavior: 'smooth'
+        });
+        sessionStorage.removeItem('needScroll');
+      }
+    </script>
   </body>
 </html>

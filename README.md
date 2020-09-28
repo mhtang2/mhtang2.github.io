@@ -1,6 +1,6 @@
 # Not Pure Poole <!-- omit in toc -->
 
-**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It was built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
+**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
 
 -----
 
@@ -14,6 +14,7 @@ See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-p
   - [Configuration](#configuration)
   - [Customizing Head](#customizing-head)
   - [Creating Themes](#creating-themes)
+  - [Customizing Navigation](#customizing-navigation)
 - [Development](#development)
 - [License](#license)
 
@@ -83,6 +84,17 @@ For example, below we've created the beginnings of a blue theme:
 ```
 
 Then, apply the theme by adding `data-theme="blue"` to the `<html>` element.
+
+### Customizing Navigation
+
+You can create a file `_data/navigation.yml` to configure links to some pages. For example,
+
+```yml
+- title: Blog
+  url: /
+- title: About
+  url: /about/
+```
 
 ## Development
 

@@ -1,0 +1,61 @@
+// Sidebar
+//
+// Styles for the sidebar.
+
+.masthead {
+  text-align: center;
+  margin: auto;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.masthead-title {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+
+  a {
+    border-bottom: 2px solid var(--sidebar-link-border-color);
+  }
+
+  a:hover,
+  a:focus {
+    border-color: var(--sidebar-link-border-hover-color);
+  }
+}
+
+.masthead-tagline {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: .5;
+}
+
+.navigation-list {
+  margin-top: var(--spacer-2);
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-item {
+  display: block;
+  margin-bottom: var(--spacer);
+}
+
+.navigation-item a {
+  background: transparent;
+  color: inherit;
+  letter-spacing: 0.05em;
+  font-size: 90%;
+  border-bottom: 2px solid var(--sidebar-link-border-color);
+}
+
+.navigation-item a:hover,
+.navigation-item a:focus {
+  border-color: var(--sidebar-link-border-hover-color);
+}

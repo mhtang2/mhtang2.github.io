@@ -6,4 +6,4 @@ author: Songzi Vong
 
 The Jekyll theme **Not Pure Poole** v0.1.0 was released!
 
-Not Pure Poole is a simple, beautiful, and powerful Jekyll theme for blogs. It was built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
+Not Pure Poole is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
