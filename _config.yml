@@ -4,6 +4,7 @@ description: A simple, beautiful, and powerful Jekyll theme for blogs
 url: https://vszhub.github.io
 paginate: 5
 permalink: pretty
+cover_image: /bg.jpeg
 
 # Gems
 plugins:

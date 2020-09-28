@@ -19,8 +19,7 @@
 .sidebar-left {
   display: flex;
   padding: var(--spacer);
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-color);
+  background: center / cover;
   height: 100vh;
 }
 

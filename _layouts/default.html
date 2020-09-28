@@ -6,7 +6,8 @@
   <body>
 
     <div class="container pure-g">
-      <div class="sidebar-left pure-u-1 pure-u-md-1-4">
+      {% include cover.html %}
+    <div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image }});{% endif %}">
         <header class="masthead">
           <div class="masthead-title">
             <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>

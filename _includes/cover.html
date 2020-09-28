@@ -1,0 +1,15 @@
+{%- assign cover_bg_color = site.cover_bg_color | default: "rgb(40, 73, 77)" -%}
+{%- assign cover_color    = site.cover_color    | default: "rgb(255, 255, 255)" -%}
+{%- assign cover_image    = site.cover_image -%}
+
+{%- if page.cover_bg_color -%}
+  {%- assign cover_bg_color  = page.cover_bg_color -%}
+{%- endif -%}
+
+{%- if page.cover_color -%}
+  {%- assign cover_color     = page.cover_color -%}
+{%- endif -%}
+
+{%- if page.cover_image -%}
+  {%- assign cover_image     = page.cover_image -%}
+{%- endif -%}

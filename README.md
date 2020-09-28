@@ -15,6 +15,7 @@ See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-p
   - [Customizing Head](#customizing-head)
   - [Creating Themes](#creating-themes)
   - [Customizing Navigation](#customizing-navigation)
+  - [Customizing Cover Image](#customizing-cover-image)
   - [Something More](#something-more)
 - [Development](#development)
 - [License](#license)
@@ -95,6 +96,17 @@ You can create a file `_data/navigation.yml` to configure links to some pages. F
   url: /
 - title: About
   url: /about/
+```
+
+### Customizing Cover Image
+
+You can set your own cover image by modify the `cover_image` variable in `_config.yml`, and you can also set different cover images on different pages by setting the `cover_image` variable on each page.
+
+If you discover that the contrast between the cover text color and the cover background color is not enough, you can also adjust these two variables:
+
+```yml
+cover_bg_color: rgb(40, 73, 77)
+cover_color: rgb(255, 255, 255)
 ```
 
 ### Something More

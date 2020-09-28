@@ -18,13 +18,9 @@
   font-size: 2rem;
   font-weight: 900;
 
-  a {
-    border-bottom: 2px solid var(--sidebar-link-border-color);
-  }
-
   a:hover,
   a:focus {
-    border-color: var(--sidebar-link-border-hover-color);
+    color: var(--link-hover-color);
   }
 }
 
@@ -33,7 +29,7 @@
   margin: 0;
   font-size: 1.25rem;
   font-weight: 400;
-  opacity: .5;
+  opacity: .7;
 }
 
 .navigation-list {
@@ -52,10 +48,11 @@
   color: inherit;
   letter-spacing: 0.05em;
   font-size: 90%;
-  border-bottom: 2px solid var(--sidebar-link-border-color);
-}
+  border-bottom: 2px solid;
+  border-color: inherit;
 
-.navigation-item a:hover,
-.navigation-item a:focus {
-  border-color: var(--sidebar-link-border-hover-color);
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+  }
 }
