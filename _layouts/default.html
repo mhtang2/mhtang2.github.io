@@ -79,6 +79,10 @@
 
     {%- include scroll.html -%}
 
+    {%- if jekyll.environment == "production" and site.disqus -%}
+      <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
+    {%- endif -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}

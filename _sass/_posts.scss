@@ -49,6 +49,16 @@
   color: var(--gray-600);
 }
 
+.comment-count {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
 
 // Related posts
 .related {
