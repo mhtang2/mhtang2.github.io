@@ -9,6 +9,16 @@
       {% include cover.html %}
       <div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
         <header class="masthead">
+          {% if site.avatar -%}
+            <div class="avatar">
+              {%- if site.avatar contains "://" -%}
+                {%- assign avatar = site.avatar -%}
+              {%- else -%}
+                {%- assign avatar = site.avatar | relative_url -%}
+              {%- endif -%}
+              <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}">
+            </div>
+          {%- endif %}
           <div class="masthead-title">
             <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
           </div>

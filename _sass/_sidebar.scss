@@ -13,6 +13,15 @@
   }
 }
 
+.avatar-image {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .masthead-title {
   padding: 0;
   margin: 0;
@@ -71,5 +80,11 @@
   &:focus {
     color: var(--link-hover-color);
     background-color: transparent;
+  }
+}
+
+@media (max-width: 48rem) {
+  .avatar-image {
+    width: 15%;
   }
 }
