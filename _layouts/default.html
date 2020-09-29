@@ -7,7 +7,7 @@
 
     <div class="container pure-g">
       {% include cover.html %}
-    <div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
+      <div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
         <header class="masthead">
           <div class="masthead-title">
             <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
@@ -26,6 +26,19 @@
               </ul>
             </nav>
           {%- endif -%}
+          {% if site.data.social -%}
+            <div class="social pure-menu pure-menu-horizontal">
+              <ul class="social-icons pure-menu-list">
+                {% for social in site.data.social -%}
+                  <li class="pure-menu-item">
+                    <a class="social-icon pure-menu-link" href="{{ social.url }}">
+                      <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+                    </a>
+                  </li>
+                {%- endfor %}
+              </ul>
+            </div>
+          {%- endif %}
         </header>
       </div>
       <div class="content pure-u-1 pure-u-md-1-2">
@@ -51,6 +64,8 @@
 
       </div>
     </div>
+
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
     {%- include scroll.html -%}
 
