@@ -102,7 +102,7 @@ You can create a file `_data/navigation.yml` to configure links to some pages. F
 
 ### Customizing Cover Image
 
-You can set your own cover image by modify the `cover_image` variable in `_config.yml`, and you can also set different cover images on different pages by setting the `cover_image` variable on each page.
+You can set your own cover image by modifying the `cover_image` variable in `_config.yml`, and you can also set different cover images on different pages by setting the `cover_image` variable on each page.
 
 If you discover that the contrast between the cover text color and the cover background color is not enough, you can also adjust these two variables:
 
