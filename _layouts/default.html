@@ -20,7 +20,7 @@
               <ul class="navigation-list">
                 {%- for nav in site.data.navigation -%}
                   <li class="navigation-item">
-                    <a onclick="sessionStorage.setItem('needScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
+                    <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
                   </li>
                 {%- endfor -%}
               </ul>
