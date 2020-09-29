@@ -1,0 +1,32 @@
+<script>
+  function scroll() {
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('needScroll');
+  }
+
+  const needScroll = sessionStorage.getItem('needScroll');
+  const maxWidth = "(max-width: 48rem)";
+  const result = window.matchMedia(maxWidth);
+  var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { 
+    return p.toString() === "[object SafariRemoteNotification]"; }
+  )(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+  if (isSafari) {
+    // There is weird bug on Safari when we directly access
+    //     window.matchMedia(maxWidth).matches
+    // The value is always false even it really matches.
+    result.addListener((match) => {
+      if (match.media == maxWidth) {
+        if (match.matches && needScroll == 'true') {
+          scroll();
+        }
+      }
+    });
+  } else if (result.matches && needScroll == 'true') {
+    scroll();
+  }
+</script>

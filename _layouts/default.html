@@ -52,20 +52,10 @@
       </div>
     </div>
 
+    {%- include scroll.html -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
-
-    <script>
-      const needScroll = sessionStorage.getItem('needScroll');
-      if (window.matchMedia('(max-width: 48rem)').matches && needScroll == 'true') {
-        window.scrollTo({
-          left: 0, 
-          top: window.innerHeight,
-          behavior: 'smooth'
-        });
-        sessionStorage.removeItem('needScroll');
-      }
-    </script>
   </body>
 </html>
