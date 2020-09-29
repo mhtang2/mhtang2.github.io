@@ -4,7 +4,7 @@
 // there are no more previous or next posts to show.
 
 .pagination {
-  margin: 0 -1.5rem var(--spacer);
+  margin: 0 -1.5rem;
   color: var(--gray-500);
   text-align: center;
 }
@@ -27,9 +27,10 @@ a.pagination-item:hover {
   background-color: var(--border-color);
 }
 
-@media (min-width: 30em) {
+@media (min-width: $sm-width) {
   .pagination {
     margin: var(--spacer-3) 0;
+    height: calc(var(--body-font-size) * var(--body-line-height) + var(--spacer) * 2);
   }
 
   .pagination-item {
