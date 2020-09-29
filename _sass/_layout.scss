@@ -28,7 +28,7 @@ footer {
   margin-bottom: var(--spacer-3);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: $md-width) {
   .content {
     padding-top: var(--spacer-3);
     padding-left: var(--spacer-3);
@@ -43,25 +43,25 @@ footer {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: $lg-width) {
   .sidebar-right {
     display: block;
   }
 }
 
-@media (max-width: 60rem) {
+@media (max-width: $lg-width) {
   .sidebar-right {
     display: none;
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: $md-width) {
   .content {
     width: 100%;
   }
 }
 
-@media (min-width: 48rem) and (max-width: 60rem) {
+@media (min-width: $md-width) and (max-width: $lg-width) {
   .content {
     width: 75%;
   }

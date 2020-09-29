@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: $md-width) {
   .avatar-image {
     width: 15%;
   }
