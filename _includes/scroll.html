@@ -1,10 +1,14 @@
 <script>
-  function scroll() {
-    window.scrollTo({
-      left: 0, 
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
+  function scroll(isSmooth) {
+    if (isSmooth) {
+      window.scrollTo({
+        left: 0, 
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    } else {
+      window.scrollTo(0, window.innerHeight);
+    }
     sessionStorage.removeItem('needScroll');
   }
 
@@ -22,11 +26,11 @@
     result.addListener((match) => {
       if (match.media == maxWidth) {
         if (match.matches && needScroll == 'true') {
-          scroll();
+          scroll(false);
         }
       }
     });
   } else if (result.matches && needScroll == 'true') {
-    scroll();
+    scroll(true);
   }
 </script>
