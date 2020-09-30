@@ -139,13 +139,13 @@ Not Pure Poole supports posts archive by date, categories, and tags. For enablin
 ```yml
 - type: dates
   title: Dates
-  permalink: /dates/
+  url: /dates/
 - type: categories
   title: Categories
-  permalink: /categories/
+  url: /categories/
 - type: tags
   title: Tags
-  permalink: /tags/
+  url: /tags/
 ```
 
 After that, the navigation to these archive pages would be shown on the top of the homepage.

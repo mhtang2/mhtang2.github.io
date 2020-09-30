@@ -1,9 +1,9 @@
 - type: dates
   title: Dates
-  permalink: /dates/
+  url: /dates/
 #- type: categories
 #  title: Categories
-#  permalink: /categories/
+#  url: /categories/
 - type: tags
   title: Tags
-  permalink: /tags/
+  url: /tags/
