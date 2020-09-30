@@ -68,6 +68,8 @@ You can choose one of the following methods to install Not Pure Poole:
 
 ## Usage
 
+You can read this [example post](https://vszhub.github.io/not-pure-poole/2020/09/29/welcome-to-not-pure-poole/) to see the rendering result in this theme, and put the [source](_posts/2020-09-29-welcome-to-not-pure-poole.md) aside to learn some basic usages.
+
 ### Configuration
 
 The [`_config.yml`](_config.yml) file in this repository already contains some variables, you can try to override them in your repository.
