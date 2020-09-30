@@ -24,6 +24,9 @@ layout: default
     <p>{{ post.excerpt | strip_html }}</p>
   </section>
   {% endfor %}
+  {%- if jekyll.environment == "production" and site.disqus -%}
+    <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
+  {%- endif -%}
 </div>
 
 <div class="pagination">
