@@ -7,6 +7,11 @@
   margin: 0;
 }
 
+.home-header {
+  margin-top: -1em;
+  margin-bottom: var(--spacer-3);
+}
+
 .content {
   padding-top: var(--spacer-2);
   padding-left: var(--spacer-2);
@@ -40,6 +45,10 @@ footer {
     position: fixed;
     top: 0;
     bottom: 0;
+  }
+
+  .home-header {
+    margin-top: -2em;
   }
 }
 
