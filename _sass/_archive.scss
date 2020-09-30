@@ -2,6 +2,11 @@
 //
 // Styles for archive pages.
 
+.taxonomies-wrapper {
+  margin-top: var(--spacer-2);
+  margin-bottom: var(--spacer-2);
+}
+
 .taxonomies {
   list-style: none;
   display: grid;
