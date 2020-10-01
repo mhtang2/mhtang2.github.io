@@ -6,6 +6,10 @@
 
 See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-pure-poole/).
 
+![Screenshot](screenshot-desk-home.png)
+![Screenshot](screenshot-desk-post.png)
+![Screenshot](screenshot-mobile.png)
+
 ## Table of Contents <!-- omit in toc -->
 
 - [Features](#features)
