@@ -48,9 +48,11 @@
 
     li {
       font-weight: bold;
-      padding: 0.5rem;
 
       a {
+        padding-top: .2em;
+        padding-bottom: .2em;
+        padding-left: .5em;
         border-bottom: 1px solid var(--border-color);
       }
     }
@@ -58,6 +60,6 @@
 
   li ul li a {
     font-weight: normal;
-    padding-left: 1.25rem;
+    padding-left: 1.25em;
   }
 }
