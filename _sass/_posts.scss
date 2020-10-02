@@ -89,3 +89,43 @@
     }
   }
 }
+
+.post-tags-section {
+  display: block;
+  padding: var(--spacer) 0;
+  color: var(--gray-600);
+}
+
+.post-tags-icon {
+  display: inline-block;
+  margin-right: var(--spacer);
+}
+
+.post-tags {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-right: var(--spacer);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: var(--body-bg);
+        background-color: var(--link-hover-color);
+      }
+    }
+  }
+}
+
+.post-tag {
+  padding: .1em .5em;
+  border: 1px solid var(--border-color);
+  border-radius: .5em;
+}

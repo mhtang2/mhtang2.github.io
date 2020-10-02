@@ -27,6 +27,10 @@ layout: default
 
   {{ content }}
 
+  {% if page.tags %}
+    {% include post-tags.html %}
+  {% endif %}
+
   {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
     {% include disqus.html %}
   {% endif %}
