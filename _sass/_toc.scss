@@ -5,6 +5,8 @@
   position: sticky;
   top: calc(var(--spacer-3) * 2.5);
   width: auto;
+  padding-left: var(--spacer);
+  padding-right: var(--spacer);
 }
 
 .toc-title {
