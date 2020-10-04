@@ -44,7 +44,7 @@
 
   --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --code-color: var(--grape);
-  --code-bg: var(--gray-000);
+  --code-bg: #fbf1c7;
 
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
@@ -63,7 +63,7 @@
 
     --border-color: rgba(255,255,255,.15);
 
-    --code-bg: var(--gray-900);
+    --code-bg: #282828;
   }
 }
 
