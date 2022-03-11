@@ -1,6 +1,6 @@
 ## Demo
  <iframe width="800" height="500"
-src="https://www.youtube.com/embed/NNRhOr6Fbqo" 
+src="https://www.youtube.com/embed/_yoCv8ykoHI" 
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
@@ -22,7 +22,7 @@ This project involved the whole machine learning pipeline, from collecting data,
 As we mentioned before, we hope to have time in the future to implement the part of our pipeline which generates labeled data so we can train a better model through fully supervised learning. There are also numerous other cool features we could implement, like generating skewed  mouth animations to match the skew of the face.
 
  <iframe width="800" height="500"
-src="https://www.youtube.com/embed/_yoCv8ykoHI" 
+src="https://www.youtube.com/embed/NNRhOr6Fbqo" 
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
