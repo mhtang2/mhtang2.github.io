@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Deep Learning Theory</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Deep Learning Theory</h1>
+			<p>Intereseting problems from my homework</p>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Content -->
+			<section id="content" class="main">
+				<h2>Background:</h2>
+				<p>
+				This is my homework for CS 540, a proof based graduate course in deep learning theory. The homework was designed by Prof. Telgarsky <a href="https://mjt.cs.illinois.edu/courses/dlt-f22/" target="_blank">[Link]</a>
+				Many of the proofs for this homework are regarding universal approximation and the limits of using networks to universally approximate functions.	
+				</p>
+				<h2>Overview</h2>
+				<ol>
+					<li>Show when universal approximation works well and when it doesn't
+						<ul>
+							<li>a) Show that for any loss, the best neural network performs as well as the best continuous functions</li> 
+							<li>b) Show that bounding approximation error by 1-norm is not enough, and that a uniform norm is required. i.e. two functions may be close on average (1-norm), but if they are not bounded by a uniform norm (max), they could yield wildy different losses due to distribution of the data</li>
+							<li>c) Show that functions that change infinitely like sin(x) cannot be approximated to bounded error</li>
+							<li>d) Show the equivalence between a wide shallow network, and deep narrow network by construction</li>
+						</ul>
+					</li>
+					<li> General statements of universal approximation use a number of nodes proportional to the Lipschitz constant of the approximated function. However, parts of the function that change less should use less nodes. This shows an adaptive construction for universal approximation.
+						<ul>
+							<li>a) Show that bounded variation norm is less than Lipschitz norm</li>
+							<li>b) Cases where bounded variation norm is much smaller than Lipschitz norm</li>
+							<li>c) The adaptive construction which uses number of nodes proportional to BV-norm instead of Lipschitz constant</li>
+							<li>d) Show that ReLU networks can also be used for the approximation</li>
+						</ul>
+					</li>
+					<li> Show that two data-points which are close together are hard to approximate. When first layer weights are initialized randomly, there is a high probability that to separate the two points, second layer weights need to be picked with very high norm(increasing complexity).
+					</li>
+					<li> Show various properties of approximation
+						<ul>
+							<li>Approximation of functions is closed under single derivative and linear combination</li>
+							<li>Approximation of functions is closed under multiple derivatives (induction)</li>
+							<li>Monomials can be aproximated</li>
+							<li>exp(x) can be approximated</li>
+						</ul>
+					</li>
+				</ol>
+				<embed src="resources/dlt_hw1.pdf" width="100%" height="1000" type="application/pdf">
+					
+			</section>
+			<p></p>
+				<p><a href="index.html#first" class="button primary" style="float:left;">Back to All Projects</a></p>
+		
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
