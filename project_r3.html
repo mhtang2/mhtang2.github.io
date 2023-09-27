@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>NCSA Hackathon</title>
+	<title>Selective Image Content Filtering</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -24,8 +24,8 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1>NCSA Hackathon</h1>
-			<p>Spacial-Temporal Prediction</p>
+			<h1>Selective Image Content Filtering</h1>
+			<p>My submission for Nextdoor's internal hackathon</p>
 		</header>
 
 		<!-- Main -->
@@ -33,21 +33,21 @@
 			<!-- Content -->
 			<section id="content" class="main">
 				<h2> Overview</h2>
-				<p>This hackathon was hosted by the National Center for Supercomputing Applications(NCSA) at UIUC.
-					The goal was to create a model to predict certain atmospheric properties given the concentrations of
-					100
-					chemicals. The main challenge was handling high dimensional temporal-spatial data. We were given
-					time-series data where each entry was a 3D tensor (Chemical concentrations at each point in space).
-					Since there were 100 chemicals, our data was of dimension (# of timesteps, # of chemicals, x, y, z),
-					with structural correlation over the time and space dimensions.</p>
+				<p>This hackathon was a 2 day long event hosted by Nextdoor during my Summer internship.
+					The purpose was to demo technology which I thought was novel, interesting, and relevant to our
+					product.
+					There currently exists a feature which uses LLMs to detect aggressive or offensive comments and
+					suggest changes to the user before they post the comment.
+					My idea was to have something similar, but for visual features like images or videos instead.
 
-				<p>In total we had 200GB of data, so the only viable way to train the model was using multiple GPUs and
-					resources on clusters provisioned by NCSA.</p>
+				</p>
+				<p>This project utilizes YOLO and DALLE inpainting to demonstrate that such a project is viable.
+				</p>
 
-				<embed src="resources/hal_hack_slides.pdf" width="800" height="600" type="application/pdf">
-				</section>
-				<p></p>
-				<p><a href="index.html#first" class="button primary" style="float:left;">Back to All Projects</a></p>
+				<embed src="resources/R3_hack_slides.pdf" width="1000" height="600" type="application/pdf">
+			</section>
+			<p></p>
+			<p><a href="index.html#first" class="button primary" style="float:left;">Back to All Projects</a></p>
 		</div>
 
 		<!-- Footer -->

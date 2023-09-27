@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>NCSA Hackathon</title>
+	<title>Effects of Distribution Shift in Data Augmentation</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -24,8 +24,8 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1>NCSA Hackathon</h1>
-			<p>Spacial-Temporal Prediction</p>
+			<h1>Effects of Distribution Shift in Data Augmentation</h1>
+			<p>Final research project for Transfer Learning course</p>
 		</header>
 
 		<!-- Main -->
@@ -33,18 +33,23 @@
 			<!-- Content -->
 			<section id="content" class="main">
 				<h2> Overview</h2>
-				<p>This hackathon was hosted by the National Center for Supercomputing Applications(NCSA) at UIUC.
-					The goal was to create a model to predict certain atmospheric properties given the concentrations of
-					100
-					chemicals. The main challenge was handling high dimensional temporal-spatial data. We were given
-					time-series data where each entry was a 3D tensor (Chemical concentrations at each point in space).
-					Since there were 100 chemicals, our data was of dimension (# of timesteps, # of chemicals, x, y, z),
-					with structural correlation over the time and space dimensions.</p>
+				<p>This research project was done for a graduate course I took on Transfer Learning.
+					While transfer learning is commonly thought of as applying models across domains, it can
+					equivalently be thought of as looking at how models handle shifts in the distribution of their input dataset.
+					In our project we seek to quantify how image data augmentations affect the distribution,
+					and consequently how that distribution shift affects the model performance.
+				</p>
 
-				<p>In total we had 200GB of data, so the only viable way to train the model was using multiple GPUs and
-					resources on clusters provisioned by NCSA.</p>
-
-				<embed src="resources/hal_hack_slides.pdf" width="800" height="600" type="application/pdf">
+				<p>
+					While it is know that dataset augmentation will benefit model performance, we are interested in why that is the case.
+					Intuitively it should help model generalization, but we seek to find a more concrete explanation
+					by analyzing the problem through the lens of distribution shift.
+				</p>
+				<p>The poster and final paper are both included below.</p>
+				<h2>Poster</h2>
+				<embed src="resources/transfer_learning_poster.pdf" width="1000" height="600" type="application/pdf">
+				<h2>Final paper</h2>
+				<embed src="resources/transfer_learning_writeup.pdf" width="800" height="800" type="application/pdf">
 				</section>
 				<p></p>
 				<p><a href="index.html#first" class="button primary" style="float:left;">Back to All Projects</a></p>
