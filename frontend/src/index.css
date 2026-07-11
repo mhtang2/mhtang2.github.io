@@ -30,7 +30,6 @@
   html {
     box-sizing: border-box;
     scroll-padding-top: 4.5rem;
-    scrollbar-gutter: stable;
   }
 
   *,
@@ -136,11 +135,6 @@
     max-width: 100%;
     height: auto;
   }
-
-  body.is-preload * {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
 @layer components {
@@ -189,11 +183,6 @@
   .section-heading-centered::after {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .hero-fade > * {
-    transition: opacity 3s ease 0.5s;
-    opacity: 1;
   }
 
   .content-prose {

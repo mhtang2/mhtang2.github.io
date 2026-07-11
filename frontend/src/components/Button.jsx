@@ -1,40 +1,28 @@
 import { Link } from 'react-router-dom'
-import { cn } from '../utils/classNames'
 import { btn, btnCard, btnOutline, btnPrimary } from '../styles/ui'
 
-export default function Button({
-  children,
-  href,
-  variant = 'outline',
-  inCard = false,
-  className,
-  ...props
-}) {
-  const classes = cn(
-    btn,
-    variant === 'primary' ? btnPrimary : inCard ? btnCard : btnOutline,
-    className,
-  )
+export default function Button({ children, href, primary = false, inCard = false, className = '' }) {
+  const style = primary ? btnPrimary : inCard ? btnCard : btnOutline
+  const classes = `${btn} ${style} ${className}`.trim()
 
-  if (href) {
-    const isExternal =
-      href.startsWith('http') || href.endsWith('.pdf') || href.startsWith('mailto:')
+  if (!href) {
+    return (
+      <button type="button" className={classes}>
+        {children}
+      </button>
+    )
+  }
 
-    if (!isExternal) {
-      return (
-        <Link to={href} className={classes} {...props}>
-          {children}
-        </Link>
-      )
-    }
+  const isExternal = href.startsWith('http') || href.endsWith('.pdf')
+  const isHash = href.includes('#')
 
+  if (isExternal || isHash) {
     return (
       <a
         href={href}
         className={classes}
         target={isExternal ? '_blank' : undefined}
         rel={isExternal ? 'noreferrer' : undefined}
-        {...props}
       >
         {children}
       </a>
@@ -42,8 +30,8 @@ export default function Button({
   }
 
   return (
-    <button type="button" className={classes} {...props}>
+    <Link to={href} className={classes}>
       {children}
-    </button>
+    </Link>
   )
 }

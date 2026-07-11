@@ -21,16 +21,12 @@ const LINKS = [
   { href: 'https://www.linkedin.com/in/mhtang2', label: 'LinkedIn', icon: LinkedInIcon },
 ]
 
-export default function SocialLinks({ className }) {
-  return (
-    <ul className={className}>
-      {LINKS.map(({ href, label, icon: Icon }) => (
-        <li key={href}>
-          <a href={href} className={socialLink} target="_blank" rel="noreferrer" aria-label={label}>
-            <Icon />
-          </a>
-        </li>
-      ))}
-    </ul>
-  )
+export default function SocialLinks() {
+  return LINKS.map(({ href, label, icon: Icon }) => (
+    <li key={href}>
+      <a href={href} className={socialLink} target="_blank" rel="noreferrer" aria-label={label}>
+        <Icon />
+      </a>
+    </li>
+  ))
 }

@@ -23,8 +23,7 @@ src/
 └── index.css     # Theme + base styles
 public/
 ├── images/       # Site images
-├── resources/    # PDFs, resume
-└── CNAME         # Custom domain (mtang.me)
+└── resources/    # PDFs, resume
 ```
 
 ## Routes
@@ -33,8 +32,6 @@ public/
 |------|------|
 | `/` | Homepage (about, projects, experience) |
 | `/projects/:slug` | Project detail |
-| `/generic` | Sample content page |
-| `/element-templates` | UI reference page |
 
 ## Deploying to GitHub Pages
 
@@ -44,7 +41,7 @@ This is a client-side SPA with clean URLs. GitHub Pages needs a fallback for dir
 
 1. `npm run build` (also writes `dist/404.html` for SPA fallback)
 2. Copy `dist/*` to the branch GitHub Pages serves (e.g. `master` or `gh-pages`)
-3. Ensure `CNAME` is included for `mtang.me`
+3. Set custom domain (`mtang.me`) in your host's DNS or GitHub Pages settings if needed
 
 ### Option B — `frontend/` subfolder with Actions (recommended)
 
@@ -60,6 +57,6 @@ VITE_BASE_PATH=/subpath/ npm run build
 
 ## Notes
 
-- Scroll behavior is native (hash links + CSS `sticky` nav). No JS scroll hijacking.
+- Scroll behavior is native (hash links + CSS `sticky` nav).
 - Assets live in `public/` and are served at `/images/...`, `/resources/...`.
 - The frozen static site is on the `legacy-static` branch for reference.
