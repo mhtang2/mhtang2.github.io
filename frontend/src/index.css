@@ -221,6 +221,15 @@
     margin-bottom: 0;
   }
 
+  .site-nav-list {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .site-nav-list li {
+    margin-bottom: 0;
+  }
+
   .site-nav-link,
   .project-card {
     border-bottom: none !important;
