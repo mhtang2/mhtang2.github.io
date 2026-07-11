@@ -2,7 +2,6 @@ import { Navigate, useParams } from 'react-router-dom'
 import BackLink from '../components/BackLink'
 import { backLinkFloat } from '../styles/backLink'
 import ProjectBody from './projects/ProjectBody'
-import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
 import SiteWrapper from '../components/SiteWrapper'
 import MainContentCard from '../components/layout/MainContentCard'
@@ -40,8 +39,6 @@ export default function ProjectDetail() {
             </BackLink>
           </section>
         </MainContentCard>
-
-        <SiteFooter />
       </div>
     </SiteWrapper>
   )

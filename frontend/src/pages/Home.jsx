@@ -1,5 +1,4 @@
 import ProjectCardGrid from '../components/ProjectCardGrid'
-import SiteFooter from '../components/SiteFooter'
 import SiteNav from '../components/SiteNav'
 import SiteWrapper from '../components/SiteWrapper'
 import AboutSection from '../components/home/AboutSection'
@@ -39,8 +38,6 @@ export default function Home() {
           <ExperienceList items={experience} />
         </HomeSection>
       </MainContentCard>
-
-      <SiteFooter />
     </SiteWrapper>
   )
 }

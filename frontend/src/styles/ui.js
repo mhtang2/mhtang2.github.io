@@ -1,4 +1,4 @@
-/** Shared UI tokens (buttons, spotlight, footer). */
+/** Shared UI tokens (buttons, spotlight). */
 
 export const socialLink =
   'inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white'
@@ -22,7 +22,5 @@ export const spotlightImageWrap =
   'ml-16 inline-block rounded-full border border-white/35 p-2.5 max-lg:mb-8 max-lg:ml-0 max-md:p-1.5'
 
 export const spotlightImage = 'block h-64 w-64 rounded-full object-cover max-md:h-48 max-md:w-48'
-
-export const siteFooter = 'px-8 py-8 text-center text-sm text-white/50'
 
 export const videoEmbed = 'mb-8 aspect-video w-full max-w-full'
