@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import {
   pdfPreview,
   pdfPreviewCaption,
@@ -7,30 +7,12 @@ import {
   pdfPreviewImage,
   pdfPreviewPlaceholder,
 } from '../styles/pdfPreview'
-import { renderPdfFirstPage } from '../utils/renderPdfFirstPage'
+import { pdfPreviewSrc } from '../utils/pdfPreviewPath'
 
 export default function PdfPreview({ href, children, maxWidth = 720, scale = 1 }) {
   const [status, setStatus] = useState('loading')
-  const [preview, setPreview] = useState(null)
-  const renderIdRef = useRef(0)
-  const renderWidth = maxWidth * scale
-
-  useEffect(() => {
-    const renderId = ++renderIdRef.current
-    setStatus('loading')
-    setPreview(null)
-
-    renderPdfFirstPage(href, { maxWidth: renderWidth })
-      .then((result) => {
-        if (renderId !== renderIdRef.current) return
-        setPreview(result)
-        setStatus('ready')
-      })
-      .catch(() => {
-        if (renderId !== renderIdRef.current) return
-        setStatus('error')
-      })
-  }, [href, renderWidth])
+  const previewWidth = maxWidth * scale
+  const previewSrc = pdfPreviewSrc(href)
 
   if (status === 'error') {
     return (
@@ -48,23 +30,21 @@ export default function PdfPreview({ href, children, maxWidth = 720, scale = 1 }
       target="_blank"
       rel="noreferrer"
       className={pdfPreview}
-      style={{ width: renderWidth, maxWidth: '100%' }}
+      style={{ width: previewWidth, maxWidth: '100%' }}
       aria-label={typeof children === 'string' ? children : 'Open PDF'}
     >
       <div className={pdfPreviewFrame}>
         {status === 'loading' ? (
           <div className={pdfPreviewPlaceholder}>Loading preview…</div>
         ) : null}
-        {preview ? (
-          <img
-            src={preview.src}
-            alt=""
-            className={pdfPreviewImage}
-            width={preview.width}
-            height={preview.height}
-            style={{ display: status === 'ready' ? 'block' : 'none' }}
-          />
-        ) : null}
+        <img
+          src={previewSrc}
+          alt=""
+          className={pdfPreviewImage}
+          style={{ display: status === 'ready' ? 'block' : 'none' }}
+          onLoad={() => setStatus('ready')}
+          onError={() => setStatus('error')}
+        />
       </div>
       {children ? <p className={pdfPreviewCaption}>{children}</p> : null}
     </a>

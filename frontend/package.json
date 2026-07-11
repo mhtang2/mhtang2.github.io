@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite --port 5174",
     "build": "vite build && cp dist/index.html dist/404.html",
+    "generate:pdf-previews": "bash scripts/generate-pdf-previews.sh",
     "lint": "oxlint",
     "preview": "vite preview --port 5174"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
-    "pdfjs-dist": "^5.6.205",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1",
