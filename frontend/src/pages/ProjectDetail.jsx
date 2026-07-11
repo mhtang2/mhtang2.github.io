@@ -5,7 +5,7 @@ import ProjectBody from '../components/ProjectBody'
 import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
 import SiteWrapper from '../components/SiteWrapper'
-import { getProjectBySlug } from '../data/projects'
+import { getProjectBySlug, projectPageTitle } from '../data/projects'
 import { mainCard, mainSection } from '../styles/ui'
 
 export default function ProjectDetail() {
@@ -13,8 +13,8 @@ export default function ProjectDetail() {
   const project = getProjectBySlug(slug)
 
   useEffect(() => {
-    document.title = project?.pageTitle ?? 'Matthew Tang'
-  }, [project?.pageTitle])
+    document.title = project ? projectPageTitle(project) : 'Matthew Tang'
+  }, [project])
 
   if (!project) {
     return <Navigate to="/" replace />

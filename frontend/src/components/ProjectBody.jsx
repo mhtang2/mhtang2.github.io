@@ -1,7 +1,13 @@
-import { pdfEmbed, videoEmbed } from '../styles/ui'
+import { videoEmbed } from '../styles/ui'
 
-function Pdf({ src, height = 1000 }) {
-  return <embed src={src} type="application/pdf" className={pdfEmbed} height={height} />
+function PdfLink({ href, children }) {
+  return (
+    <p>
+      <a href={href} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    </p>
+  )
 }
 
 function Video({ src, className }) {
@@ -29,7 +35,7 @@ const bodies = {
         In our research, we attempt to adjust their proof to account for networks with biases, thus allowing them to represent a larger class of fuctions.
       </p>
       <h2>Overview</h2>
-      <Pdf src="/resources/dlt_poster.pdf" />
+      <PdfLink href="/resources/dlt_poster.pdf">View poster (PDF)</PdfLink>
     </>
   ),
   dlt: (
@@ -75,7 +81,7 @@ const bodies = {
           </ul>
         </li>
       </ol>
-      <Pdf src="/resources/dlt_hw1.pdf" />
+      <PdfLink href="/resources/dlt_hw1.pdf">View homework (PDF)</PdfLink>
     </>
   ),
   neat: (
@@ -106,11 +112,11 @@ const bodies = {
       <p>
         While it is know that dataset augmentation will benefit model performance, we are interested in why that is the case. Intuitively it should help model generalization, but we seek to find a more concrete explanation by analyzing the problem through the lens of distribution shift.
       </p>
-      <p>The poster and final paper are both included below.</p>
+      <p>The poster and final paper are linked below.</p>
       <h2>Poster</h2>
-      <Pdf src="/resources/transfer_learning_poster.pdf" height={600} />
+      <PdfLink href="/resources/transfer_learning_poster.pdf">View poster (PDF)</PdfLink>
       <h2>Final paper</h2>
-      <Pdf src="/resources/transfer_learning_writeup.pdf" height={800} />
+      <PdfLink href="/resources/transfer_learning_writeup.pdf">View final paper (PDF)</PdfLink>
     </>
   ),
   halhack: (
@@ -122,7 +128,7 @@ const bodies = {
       <p>
         In total we had 200GB of data, so the only viable way to train the model was using multiple GPUs and resources on clusters provisioned by NCSA.
       </p>
-      <Pdf src="/resources/hal_hack_slides.pdf" height={600} />
+      <PdfLink href="/resources/hal_hack_slides.pdf">View slides (PDF)</PdfLink>
     </>
   ),
   r3: (
@@ -132,7 +138,7 @@ const bodies = {
         This hackathon was a 2 day long event hosted by Nextdoor during my Summer internship. The purpose was to demo technology which I thought was novel, interesting, and relevant to our product. There currently exists a feature which uses LLMs to detect aggressive or offensive comments and suggest changes to the user before they post the comment. My idea was to have something similar, but for visual features like images or videos instead.
       </p>
       <p>This project utilizes YOLO and DALLE inpainting to demonstrate that such a project is viable.</p>
-      <Pdf src="/resources/R3_hack_slides.pdf" height={600} />
+      <PdfLink href="/resources/R3_hack_slides.pdf">View slides (PDF)</PdfLink>
     </>
   ),
   ainimator: (
@@ -157,7 +163,7 @@ const bodies = {
         One common problem with computer vision in general is skewed and rotated camera angles. To improve our model&apos;s performance in these situations, we standardized the camera angles of each image by implementing a linear transform which could take mouth images viewed at a skewed angle and return the image viewed from a straight forward angle.
       </p>
       <p>
-        Another problem was the lack of labeled data. We would require images of different mouth shapes labeled with their respective classes. Because there is very little data in this format, we originally planned to automate data labelling to generate supervised data. By detecting extracting the mouth landmarks from existing animations, we could then cluster the data and label each data point with their class assigned by clustering. Because we didn&apos;t have as much time as we hoped to implement this feature, we came to the solution of using weak supervision to train our model. We hand labeled one image from each class, then found other images with similar shapes by comparing the L2-norm of the difference in mouth shapes.
+        Another problem was the lack of labeled data. We would require images of different mouth shapes labeled with their respective classes. Because there is very little data in this format, we originally planned to automate data labelling to generate supervised data. By detecting extracting the mouth landmarks from existing animations, we could then cluster the data and label each data point with its class assigned by clustering. Because we didn&apos;t have as much time as we hoped to implement this feature, we came to the solution of using weak supervision to train our model. We hand labeled one image from each class, then found other images with similar shapes by comparing the L2-norm of the difference in mouth shapes.
       </p>
       <h2>Accomplishments that we&apos;re proud of</h2>
       <p>
@@ -190,7 +196,7 @@ const bodies = {
       <h2>Demo</h2>
       <Video src="https://www.youtube.com/embed/VgEg_6u5XuA?si=-WRHO87gtuhRMGF0" className="mb-8 aspect-video w-full max-w-4xl" />
       <h2>Presentation</h2>
-      <Pdf src="/resources/proxy_slides.pdf" height={600} />
+      <PdfLink href="/resources/proxy_slides.pdf">View presentation (PDF)</PdfLink>
     </>
   ),
   tangstats: (

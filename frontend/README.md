@@ -49,11 +49,7 @@ Add a workflow that builds on push and publishes `frontend/dist/` to Pages. The 
 
 ### `base` path
 
-Configured as `/` for domain root (`mtang.me`). Override for subpath hosting:
-
-```bash
-VITE_BASE_PATH=/subpath/ npm run build
-```
+The site is configured for domain root (`mtang.me`) with `base: '/'` in `vite.config.js`.
 
 ## Notes
 

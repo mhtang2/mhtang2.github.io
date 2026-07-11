@@ -49,6 +49,4 @@ export const experienceLogo = 'mx-auto mb-4 block w-1/2'
 
 export const siteFooter = 'px-8 py-8 text-center text-sm text-white/50'
 
-export const pdfEmbed = 'mb-8 w-full'
-
 export const videoEmbed = 'mb-8 aspect-video w-full max-w-full'

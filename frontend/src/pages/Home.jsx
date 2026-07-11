@@ -6,7 +6,7 @@ import SiteHeader from '../components/SiteHeader'
 import SiteNav from '../components/SiteNav'
 import SiteWrapper from '../components/SiteWrapper'
 import { experience } from '../data/experience'
-import { projects } from '../data/projects'
+import { projects, projectCardTitle } from '../data/projects'
 import {
   experienceLogo,
   featureGrid,
@@ -69,11 +69,11 @@ export default function Home() {
                 <span className={featureImage}>
                   <img
                     src={project.image}
-                    alt={project.cardTitle}
+                    alt={projectCardTitle(project)}
                     style={project.imageWidth ? { width: project.imageWidth } : undefined}
                   />
                 </span>
-                <h3>{project.cardTitle}</h3>
+                <h3>{projectCardTitle(project)}</h3>
                 <p>{project.blurb}</p>
                 <Button href={`/projects/${project.slug}`} inCard>
                   Learn More
