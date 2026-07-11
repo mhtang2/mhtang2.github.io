@@ -1,5 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom'
-import Button from '../components/Button'
+import BackLink from '../components/BackLink'
+import { backLinkFloat } from '../styles/backLink'
 import ProjectBody from './projects/ProjectBody'
 import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
@@ -22,20 +23,26 @@ export default function ProjectDetail() {
 
   return (
     <SiteWrapper>
-      <SiteHeader title={project.title} subtitle={project.subtitle} />
+      <div className="relative">
+        <div className={backLinkFloat}>
+          <BackLink href="/#projects" variant="header">
+            Projects
+          </BackLink>
+        </div>
 
-      <MainContentCard>
-        <section className={mainSection}>
-          <ProjectBody slug={project.slug} />
-          <div className="mt-8">
-            <Button href="/#projects" primary inCard>
-              Back to All Projects
-            </Button>
-          </div>
-        </section>
-      </MainContentCard>
+        <SiteHeader title={project.title} subtitle={project.subtitle} />
 
-      <SiteFooter />
+        <MainContentCard>
+          <section className={mainSection}>
+            <ProjectBody slug={project.slug} />
+            <BackLink href="/#projects" className="mt-8">
+              Projects
+            </BackLink>
+          </section>
+        </MainContentCard>
+
+        <SiteFooter />
+      </div>
     </SiteWrapper>
   )
 }
