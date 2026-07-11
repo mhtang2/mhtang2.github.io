@@ -20,6 +20,7 @@ export const projects = [
     cardTitle: 'Neuroevolution of Augmenting Topologies',
     subtitle: 'An implementation of Neuroevolution of Augmenting Topologies',
     image: '/images/neat.gif',
+    imageLayout: 'full',
     blurb: 'My implementation of the Neuroevolution of Augmenting Topologies paper',
   },
   {
@@ -28,7 +29,6 @@ export const projects = [
     cardTitle: 'Data Augmentation Research',
     subtitle: 'Final research project for Transfer Learning course',
     image: '/images/augmentation.png',
-    imageWidth: '80%',
     blurb: 'Research on the effects of data augmentation on distribution shift and model performance',
   },
   {
@@ -37,6 +37,7 @@ export const projects = [
     cardTitle: 'Spacial-Temporal Prediction',
     subtitle: 'Spacial-Temporal Prediction',
     image: '/images/hal_hack.gif',
+    imageLayout: 'framed',
     blurb: 'Combining 3D U-Nets and RNN to predict on spacial temporal data',
   },
   {
@@ -44,6 +45,7 @@ export const projects = [
     title: 'Selective Image Content Filtering',
     subtitle: 'My submission for Nextdoor\'s internal hackathon',
     image: '/images/r3.gif',
+    imageLayout: 'full',
     blurb: 'Combining discriminative and generative image methods to filter out offensive content',
   },
   {
@@ -51,6 +53,7 @@ export const projects = [
     title: 'AI-nimator',
     subtitle: 'AI powered mouth animation',
     image: '/images/hack_illinois.gif',
+    imageLayout: 'full',
     blurb: 'Using AI to generate animations matching your mouth movement',
   },
   {

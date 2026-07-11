@@ -1,38 +1,29 @@
 /** Shared Tailwind class groups. */
 
 export const socialLink =
-  'inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/35 text-white/80 no-underline transition-colors hover:border-white/75 hover:bg-white/10 hover:text-white'
+  'inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white'
 
-export const navBar =
-  'sticky top-0 z-10 mx-auto w-full max-w-[64em] rounded-t-[0.25em] bg-[#f7f7f7]/95 px-4 py-3 text-center text-[#636363]'
+export const mainCard =
+  'card-surface overflow-hidden rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.08)]'
 
-export const navList = 'm-0 flex list-none flex-wrap items-center justify-center gap-1.5 p-0'
+export const mainSection = 'px-8 py-10 max-lg:px-6 max-md:px-5 max-md:py-8'
 
-export const navLink =
-  'inline-flex h-9 items-center rounded-[8px] border-b-0 px-4 text-sm no-underline transition-colors hover:bg-[rgba(222,222,222,0.25)] max-md:px-3 max-md:text-xs'
+export const experienceGrid =
+  'm-0 grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-2 lg:grid-cols-4'
 
-export const mainCard = 'card-surface -mt-px'
+export const experienceItem =
+  'rounded-xl border border-[#e4e4e7] bg-white px-5 py-6 text-center'
 
-export const mainSection = 'px-16 py-12 max-lg:px-8 max-md:px-6 max-sm:px-4'
-
-export const mainSectionSpecial = `${mainSection} text-center`
-
-export const featureGrid =
-  'm-0 -ml-8 flex list-none flex-wrap justify-center p-0 max-md:m-0 max-md:w-full'
-
-export const featureItem =
-  'mb-12 ml-8 w-[calc(33.333%-2em)] list-none max-lg:w-[calc(50%-2em)] max-md:mb-8 max-md:ml-0 max-md:w-full'
-
-export const featureImage = 'mb-4 block overflow-hidden'
+export const experienceLogo = 'mx-auto mb-4 h-12 w-auto max-w-[60%] object-contain'
 
 export const btn =
-  'inline-flex h-11 min-w-[9.25em] cursor-pointer items-center justify-center rounded-[8px] border-0 border-b-0 px-6 text-center font-light whitespace-nowrap no-underline transition-colors max-md:min-w-0'
+  'inline-flex h-10 min-w-[8.5rem] cursor-pointer items-center justify-center rounded-lg border-0 border-b-0 px-5 text-sm font-medium whitespace-nowrap no-underline transition-colors max-md:min-w-0'
 
 export const btnOutline =
   'bg-transparent text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] hover:bg-white/10'
 
 export const btnCard =
-  'bg-transparent text-[#636363] shadow-[inset_0_0_0_1px_#dddddd] hover:bg-[rgba(222,222,222,0.25)]'
+  'bg-[#fafafa] text-[#525252] shadow-[inset_0_0_0_1px_#e4e4e7] hover:bg-[#f4f4f5] hover:text-[#18181b]'
 
 export const btnPrimary = 'bg-[#8cc9f0] text-white shadow-none hover:bg-[#9acff2]'
 
@@ -44,8 +35,6 @@ export const spotlightImageWrap =
   'ml-16 inline-block rounded-full border border-white/35 p-2.5 max-lg:mb-8 max-lg:ml-0 max-md:p-1.5'
 
 export const spotlightImage = 'block h-64 w-64 rounded-full object-cover max-md:h-48 max-md:w-48'
-
-export const experienceLogo = 'mx-auto mb-4 block w-1/2'
 
 export const siteFooter = 'px-8 py-8 text-center text-sm text-white/50'
 

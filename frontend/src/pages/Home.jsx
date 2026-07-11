@@ -1,20 +1,18 @@
 import { useEffect } from 'react'
 import Button from '../components/Button'
+import ProjectCardGrid from '../components/ProjectCardGrid'
 import SectionHeading from '../components/SectionHeading'
 import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
 import SiteNav from '../components/SiteNav'
 import SiteWrapper from '../components/SiteWrapper'
 import { experience } from '../data/experience'
-import { projects, projectCardTitle } from '../data/projects'
+import { projects } from '../data/projects'
 import {
   experienceLogo,
-  featureGrid,
-  featureImage,
-  featureItem,
-  mainCard,
+  experienceGrid,
+  experienceItem,
   mainSection,
-  mainSectionSpecial,
   spotlight,
   spotlightContent,
   spotlightImage,
@@ -40,64 +38,47 @@ export default function Home() {
         }
       />
 
-      <SiteNav />
+      <div className="card-surface overflow-hidden rounded-t-2xl shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+        <SiteNav />
 
-      <div className={mainCard}>
-        <section id="intro" className={mainSection}>
-          <div className={spotlight}>
-            <div className={spotlightContent}>
-              <SectionHeading>About Me</SectionHeading>
-              <p>
-                Hi! I&apos;m Matthew. I&apos;m a Machine Learning Engineer on TikTok&apos;s social recommendation team.
-                I work on social network building, which includes friend recommendation and social content recommendation.
-                I graduated in 2024 from the University of Illinois at Urbana-Champaign with my Bachelors and Masters degrees in Computer Science.
-                Here are some really cool projects that I have been working on:
-              </p>
-              <Button href="/resources/Matthew Tang Resume.pdf">Resume</Button>
+        <div>
+          <section id="intro" className={mainSection}>
+            <div className={spotlight}>
+              <div className={spotlightContent}>
+                <SectionHeading>About Me</SectionHeading>
+                <p>
+                  Hi! I&apos;m Matthew. I&apos;m a Machine Learning Engineer on TikTok&apos;s social recommendation team.
+                  I work on social network building, which includes friend recommendation and social content recommendation.
+                  I graduated in 2024 from the University of Illinois at Urbana-Champaign with my Bachelors and Masters degrees in Computer Science.
+                  Here are some really cool projects that I have been working on:
+                </p>
+                <Button href="/resources/Matthew Tang Resume.pdf">Resume</Button>
+              </div>
+              <span className={spotlightImageWrap}>
+                <img src="/images/profile2.jpg" alt="Matthew Tang" className={spotlightImage} />
+              </span>
             </div>
-            <span className={spotlightImageWrap}>
-              <img src="/images/profile2.jpg" alt="Matthew Tang" className={spotlightImage} />
-            </span>
-          </div>
-        </section>
+          </section>
 
-        <section id="projects" className={mainSectionSpecial}>
-          <SectionHeading centered>Projects</SectionHeading>
-          <ul className={featureGrid}>
-            {projects.map((project) => (
-              <li key={project.slug} className={featureItem}>
-                <span className={featureImage}>
-                  <img
-                    src={project.image}
-                    alt={projectCardTitle(project)}
-                    style={project.imageWidth ? { width: project.imageWidth } : undefined}
-                  />
-                </span>
-                <h3>{projectCardTitle(project)}</h3>
-                <p>{project.blurb}</p>
-                <Button href={`/projects/${project.slug}`} inCard>
-                  Learn More
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </section>
+          <section id="projects" className={mainSection}>
+            <SectionHeading centered>Projects</SectionHeading>
+            <ProjectCardGrid projects={projects} />
+          </section>
 
-        <section id="experience" className={mainSectionSpecial}>
-          <SectionHeading centered>Professional Experience</SectionHeading>
-          <ul className={featureGrid}>
-            {experience.map((job) => (
-              <li key={`${job.company}-${job.dates}`} className={featureItem}>
-                <span className={featureImage}>
+          <section id="experience" className={`${mainSection} text-center`}>
+            <SectionHeading centered>Professional Experience</SectionHeading>
+            <ul className={experienceGrid}>
+              {experience.map((job) => (
+                <li key={`${job.company}-${job.dates}`} className={experienceItem}>
                   <img src={job.logo} alt={job.company} className={experienceLogo} />
-                </span>
-                <h2 className="text-[1.5em]">{job.company}</h2>
-                <span className="block">{job.role}</span>
-                <p>{job.dates}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+                  <h2 className="text-lg font-semibold text-[#18181b]">{job.company}</h2>
+                  <p className="mb-1 text-sm text-[#525252]">{job.role}</p>
+                  <p className="mb-0 text-sm text-[#71717a]">{job.dates}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </div>
 
       <SiteFooter />

@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
   --font-mono: 'Courier New', monospace;
 
   --color-bg-base: #935d8c;
@@ -29,7 +29,23 @@
 @layer base {
   html {
     box-sizing: border-box;
-    scroll-padding-top: 4.5rem;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .project-card {
+      transition: none;
+    }
+
+    .project-card:hover,
+    .project-card:active {
+      transform: none;
+    }
   }
 
   *,
@@ -42,10 +58,14 @@
     margin: 0;
     min-height: 100vh;
     font-family: var(--font-sans);
-    font-size: 17pt;
-    font-weight: 300;
-    line-height: 1.65;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.011em;
     color: var(--color-fg);
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: var(--color-bg-base);
     background-image:
       radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 45%),
@@ -55,21 +75,9 @@
     -webkit-text-size-adjust: none;
   }
 
-  @media (max-width: 1680px) {
-    body {
-      font-size: 14pt;
-    }
-  }
-
   @media (max-width: 1280px) {
     body {
-      font-size: 12pt;
-    }
-  }
-
-  @media (max-width: 360px) {
-    body {
-      font-size: 11pt;
+      font-size: 0.9375rem;
     }
   }
 
@@ -79,24 +87,26 @@
   h4,
   h5,
   h6 {
-    font-weight: 300;
-    line-height: 1.5;
-    margin: 0 0 0.7em;
-    letter-spacing: -0.025em;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 0.6em;
+    letter-spacing: -0.03em;
     color: var(--color-fg-bold);
   }
 
   h1 {
-    font-size: 2.5em;
-    line-height: 1.2;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.25em;
+    font-size: 1.125rem;
+    font-weight: 600;
   }
 
   p {
@@ -117,7 +127,7 @@
 
   strong,
   b {
-    font-weight: 400;
+    font-weight: 600;
     color: var(--color-fg-bold);
   }
 
@@ -149,6 +159,16 @@
     background: var(--color-card);
     color: var(--color-card-fg);
     border-radius: var(--radius-card);
+  }
+
+  .card-surface p,
+  .card-surface li,
+  .card-surface span {
+    color: var(--color-card-fg);
+  }
+
+  .card-surface .project-card p {
+    margin-bottom: 0;
   }
 
   .card-surface h1,
@@ -195,5 +215,15 @@
 
   .content-prose p:last-child {
     margin-bottom: 0;
+  }
+
+  .site-nav-link,
+  .project-card {
+    border-bottom: none !important;
+  }
+
+  .site-nav-link:hover,
+  .project-card:hover {
+    border-bottom: none !important;
   }
 }
