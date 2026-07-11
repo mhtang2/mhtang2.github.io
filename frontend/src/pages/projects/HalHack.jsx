@@ -1,0 +1,16 @@
+import { PdfLink } from '../../components/projects/shared'
+
+export default function HalHack() {
+  return (
+    <>
+      <h2>Overview</h2>
+      <p>
+        This hackathon was hosted by the National Center for Supercomputing Applications(NCSA) at UIUC. The goal was to create a model to predict certain atmospheric properties given the concentrations of 100 chemicals. The main challenge was handling high dimensional temporal-spatial data. We were given time-series data where each entry was a 3D tensor (Chemical concentrations at each point in space). Since there were 100 chemicals, our data was of dimension (# of timesteps, # of chemicals, x, y, z), with structural correlation over the time and space dimensions.
+      </p>
+      <p>
+        In total we had 200GB of data, so the only viable way to train the model was using multiple GPUs and resources on clusters provisioned by NCSA.
+      </p>
+      <PdfLink href="/resources/hal_hack_slides.pdf">View slides (PDF)</PdfLink>
+    </>
+  )
+}

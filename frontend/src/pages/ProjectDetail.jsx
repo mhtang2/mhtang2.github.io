@@ -1,20 +1,20 @@
-import { useEffect } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import Button from '../components/Button'
-import ProjectBody from '../components/ProjectBody'
+import ProjectBody from './projects/ProjectBody'
 import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
 import SiteWrapper from '../components/SiteWrapper'
+import MainContentCard from '../components/layout/MainContentCard'
 import { getProjectBySlug, projectPageTitle } from '../data/projects'
-import { mainCard, mainSection } from '../styles/ui'
+import { profile } from '../data/home'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { mainSection } from '../styles/layout'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
 
-  useEffect(() => {
-    document.title = project ? projectPageTitle(project) : 'Matthew Tang'
-  }, [project])
+  useDocumentTitle(project ? projectPageTitle(project) : profile.name)
 
   if (!project) {
     return <Navigate to="/" replace />
@@ -24,7 +24,7 @@ export default function ProjectDetail() {
     <SiteWrapper>
       <SiteHeader title={project.title} subtitle={project.subtitle} />
 
-      <div className={mainCard}>
+      <MainContentCard>
         <section className={mainSection}>
           <ProjectBody slug={project.slug} />
           <div className="mt-8">
@@ -33,7 +33,7 @@ export default function ProjectDetail() {
             </Button>
           </div>
         </section>
-      </div>
+      </MainContentCard>
 
       <SiteFooter />
     </SiteWrapper>

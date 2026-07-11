@@ -1,4 +1,3 @@
-import { experience } from '../data/experience'
 import {
   experienceList,
   experienceTimelineArrow,
@@ -16,7 +15,7 @@ function FlowArrow() {
   )
 }
 
-export default function ExperienceList({ items = experience }) {
+export default function ExperienceList({ items }) {
   return (
     <ul className={experienceList} aria-label="Career timeline, most recent first">
       {items.map((job, index) => (

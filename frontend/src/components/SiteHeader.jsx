@@ -1,5 +1,5 @@
 import SocialLinks from './SocialLinks'
-import { siteHeaderDetail, siteHeaderMeta, siteHeaderRole } from '../styles/ui'
+import { siteHeaderDetail, siteHeaderMeta } from '../styles/header'
 
 export default function SiteHeader({ title, subtitle, showSocial = false }) {
   return (
