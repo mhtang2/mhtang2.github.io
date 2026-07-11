@@ -175,6 +175,14 @@
     margin-bottom: 0;
   }
 
+  .card-surface .spotlight-content p {
+    margin-bottom: 1.25em;
+  }
+
+  .card-surface .spotlight-content p:last-of-type {
+    margin-bottom: 0;
+  }
+
   .card-surface h1,
   .card-surface h2,
   .card-surface h3,
@@ -195,7 +203,7 @@
     display: block;
     width: 3.25em;
     height: 2px;
-    margin: 0.7em 0 1em;
+    margin: 0.5em 0 0.5em;
     border-radius: 2px;
     background: rgba(255, 255, 255, 0.35);
   }
@@ -228,6 +236,20 @@
 
   .site-nav-list li {
     margin-bottom: 0;
+  }
+
+  .experience-timeline li {
+    margin-bottom: 0;
+  }
+
+  .experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 11px;
+    width: 1px;
+    background: #e4e4e7;
   }
 
   .site-nav-link,

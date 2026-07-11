@@ -1,12 +1,12 @@
 export const experience = [
   {
     company: 'Decagon',
-    role: 'ASWE',
+    role: 'Agent SWE',
     logo: '/images/decagon-icon.svg',
     logoLayout: 'brand',
   },
   {
-    company: 'Y Combinator',
+    company: 'Sublingual AI',
     role: 'Founder',
     logo: '/images/ycombinator.svg',
   },

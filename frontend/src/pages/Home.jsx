@@ -10,6 +10,8 @@ import ExperienceList from '../components/ExperienceList'
 import { projects } from '../data/projects'
 import {
   mainSection,
+  siteHeaderDetail,
+  siteHeaderRole,
   spotlight,
   spotlightContent,
   spotlightImage,
@@ -28,9 +30,9 @@ export default function Home() {
         title="Matthew Tang"
         subtitle={
           <>
-            MLE @ TikTok | UIUC 2024 | Interested in Deep Learning Theory and Applications
-            <br />
-            mhtang2@illinois.edu
+            <p className={siteHeaderRole}>Agent SWE @ Decagon</p>
+            <p className={siteHeaderDetail}>UIUC CS &apos;24</p>
+            <p className={siteHeaderDetail}>Interested in deep learning theory and applications</p>
           </>
         }
       />
@@ -41,13 +43,12 @@ export default function Home() {
         <div>
           <section id="intro" className={mainSection}>
             <div className={spotlight}>
-              <div className={spotlightContent}>
+              <div className={`${spotlightContent} spotlight-content`}>
                 <SectionHeading>About Me</SectionHeading>
                 <p>
-                  Hi! I&apos;m Matthew. I&apos;m a Machine Learning Engineer on TikTok&apos;s social recommendation team.
-                  I work on social network building, which includes friend recommendation and social content recommendation.
-                  I graduated in 2024 from the University of Illinois at Urbana-Champaign with my Bachelors and Masters degrees in Computer Science.
-                  Here are some really cool projects that I have been working on:
+                  Hi! I&apos;m Matthew. I graduated from the University of Illinois at Urbana-Champaign in 2024 with my Bachelors and Masters in Computer Science.
+                  I&apos;m currently an Agent SWE at Decagon, where I build CX agents. Before that, I founded Sublingual AI, which was backed by Y Combinator. We pivoted a bunch and built some really cool stuff along the way.
+                  Earlier, I was a Machine Learning Engineer at TikTok on the social recommendation team, working on friend recommendation and social content recommendation.
                 </p>
                 <Button href="/resources/Matthew Tang Resume.pdf">Resume</Button>
               </div>
@@ -58,7 +59,7 @@ export default function Home() {
           </section>
 
           <section id="projects" className={mainSection}>
-            <SectionHeading centered>Projects</SectionHeading>
+            <SectionHeading centered>Some Cool Projects</SectionHeading>
             <ProjectCardGrid projects={projects} />
           </section>
 

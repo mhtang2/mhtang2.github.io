@@ -7,23 +7,36 @@ export const LOGO_LAYOUTS = {
 }
 
 export const experienceList =
-  'm-0 mx-auto flex max-w-xl list-none flex-col gap-3 p-0'
+  'experience-timeline relative m-0 mx-auto max-w-xl list-none space-y-2 p-0'
+
+export const experienceTimelineItem = 'relative flex items-stretch gap-3'
+
+export const experienceTimelineMarker =
+  'relative flex w-6 shrink-0 flex-col items-center pt-2.5'
+
+export const experienceTimelineDot =
+  'h-2.5 w-2.5 shrink-0 rounded-full bg-white ring-2 ring-[#8cc9f0]'
+
+export const experienceTimelineArrow =
+  'mb-1 text-[#c4c4c8]'
 
 export const experienceRow =
-  'flex items-center gap-4 rounded-xl border border-[#e4e4e7] bg-white px-5 py-4 text-left'
+  'flex min-w-0 flex-1 items-center gap-2.5 rounded-lg border border-[#e4e4e7] bg-white px-3 py-2.5 text-left'
 
-export const experienceLogoIcon = 'h-10 w-10 shrink-0 object-contain'
+export const experienceLogoIcon = 'h-8 w-8 shrink-0 object-contain'
 
-export const experienceLogoWordmark = 'h-8 w-[7.5rem] shrink-0 object-contain object-left'
+export const experienceLogoWordmark = 'h-7 w-[6.5rem] shrink-0 object-contain object-left'
 
 export const experienceLogoBrand =
-  'flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#5f4d93] via-[#6b8fd4] to-[#e37682] p-1.5'
+  'flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#5f4d93] via-[#6b8fd4] to-[#e37682] p-1'
 
 export const experienceLogoBrandImage = 'h-full w-full object-contain'
 
-export const experienceCompany = 'text-base font-semibold text-[#18181b]'
+export const experienceText = 'mb-0 min-w-0 text-sm leading-snug'
 
-export const experienceRole = 'text-sm text-[#525252]'
+export const experienceCompany = 'font-semibold text-[#18181b]'
+
+export const experienceRole = 'text-[#71717a]'
 
 export function getExperienceLogoClass(logoLayout = LOGO_LAYOUTS.ICON) {
   if (logoLayout === LOGO_LAYOUTS.WORDMARK) return experienceLogoWordmark

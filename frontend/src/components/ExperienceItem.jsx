@@ -4,6 +4,7 @@ import {
   experienceLogoBrandImage,
   experienceRole,
   experienceRow,
+  experienceText,
   getExperienceLogoClass,
   isBrandLogo,
 } from '../styles/experience'
@@ -12,18 +13,18 @@ export default function ExperienceItem({ company, role, logo, logoLayout }) {
   const brandLogo = isBrandLogo(logoLayout)
 
   return (
-    <li className={`experience-row ${experienceRow}`}>
+    <div className={`experience-row ${experienceRow}`}>
       {brandLogo ? (
         <div className={experienceLogoBrand}>
-          <img src={logo} alt={company} className={experienceLogoBrandImage} />
+          <img src={logo} alt="" className={experienceLogoBrandImage} />
         </div>
       ) : (
-        <img src={logo} alt={company} className={getExperienceLogoClass(logoLayout)} />
+        <img src={logo} alt="" className={getExperienceLogoClass(logoLayout)} />
       )}
-      <div>
-        <h2 className={experienceCompany}>{company}</h2>
-        <p className={`${experienceRole} mb-0`}>{role}</p>
-      </div>
-    </li>
+      <p className={experienceText}>
+        <span className={experienceCompany}>{company}</span>
+        <span className={experienceRole}> · {role}</span>
+      </p>
+    </div>
   )
 }
