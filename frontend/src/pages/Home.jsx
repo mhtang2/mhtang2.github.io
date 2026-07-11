@@ -6,12 +6,9 @@ import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
 import SiteNav from '../components/SiteNav'
 import SiteWrapper from '../components/SiteWrapper'
-import { experience } from '../data/experience'
+import ExperienceList from '../components/ExperienceList'
 import { projects } from '../data/projects'
 import {
-  experienceLogo,
-  experienceGrid,
-  experienceItem,
   mainSection,
   spotlight,
   spotlightContent,
@@ -65,18 +62,9 @@ export default function Home() {
             <ProjectCardGrid projects={projects} />
           </section>
 
-          <section id="experience" className={`${mainSection} text-center`}>
+          <section id="experience" className={mainSection}>
             <SectionHeading centered>Professional Experience</SectionHeading>
-            <ul className={experienceGrid}>
-              {experience.map((job) => (
-                <li key={`${job.company}-${job.dates}`} className={experienceItem}>
-                  <img src={job.logo} alt={job.company} className={experienceLogo} />
-                  <h2 className="text-lg font-semibold text-[#18181b]">{job.company}</h2>
-                  <p className="mb-1 text-sm text-[#525252]">{job.role}</p>
-                  <p className="mb-0 text-sm text-[#71717a]">{job.dates}</p>
-                </li>
-              ))}
-            </ul>
+            <ExperienceList />
           </section>
         </div>
       </div>

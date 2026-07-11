@@ -171,6 +171,10 @@
     margin-bottom: 0;
   }
 
+  .card-surface .experience-row p {
+    margin-bottom: 0;
+  }
+
   .card-surface h1,
   .card-surface h2,
   .card-surface h3,

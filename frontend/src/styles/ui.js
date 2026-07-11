@@ -8,14 +8,6 @@ export const mainCard =
 
 export const mainSection = 'px-8 py-10 max-lg:px-6 max-md:px-5 max-md:py-8'
 
-export const experienceGrid =
-  'm-0 grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-2 lg:grid-cols-4'
-
-export const experienceItem =
-  'rounded-xl border border-[#e4e4e7] bg-white px-5 py-6 text-center'
-
-export const experienceLogo = 'mx-auto mb-4 h-12 w-auto max-w-[60%] object-contain'
-
 export const btn =
   'inline-flex h-10 min-w-[8.5rem] cursor-pointer items-center justify-center rounded-lg border-0 border-b-0 px-5 text-sm font-medium whitespace-nowrap no-underline transition-colors max-md:min-w-0'
 
