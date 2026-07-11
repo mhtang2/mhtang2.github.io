@@ -1,4 +1,4 @@
-import { PdfLink } from '../../components/projects/shared'
+import PdfPreview from '../../components/PdfPreview'
 
 export default function DoubleDescent() {
   return (
@@ -13,7 +13,7 @@ export default function DoubleDescent() {
         In our research, we attempt to adjust their proof to account for networks with biases, thus allowing them to represent a larger class of fuctions.
       </p>
       <h2>Overview</h2>
-      <PdfLink href="/resources/dlt_poster.pdf">View poster (PDF)</PdfLink>
+      <PdfPreview href="/resources/dlt_poster.pdf" scale={0.8}>View poster (PDF)</PdfPreview>
     </>
   )
 }

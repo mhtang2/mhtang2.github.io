@@ -1,4 +1,5 @@
-import { PdfLink, ProjectVideo } from '../../components/projects/shared'
+import PdfPreview from '../../components/PdfPreview'
+import { ProjectVideo } from '../../components/projects/shared'
 
 export default function Proxy() {
   return (
@@ -20,7 +21,7 @@ export default function Proxy() {
         className="mb-8 aspect-video w-full max-w-4xl"
       />
       <h2>Presentation</h2>
-      <PdfLink href="/resources/proxy_slides.pdf">View presentation (PDF)</PdfLink>
+      <PdfPreview href="/resources/proxy_slides.pdf" scale={0.8}>View presentation (PDF)</PdfPreview>
     </>
   )
 }

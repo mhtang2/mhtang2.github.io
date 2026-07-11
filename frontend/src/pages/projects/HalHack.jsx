@@ -1,4 +1,4 @@
-import { PdfLink } from '../../components/projects/shared'
+import PdfPreview from '../../components/PdfPreview'
 
 export default function HalHack() {
   return (
@@ -10,7 +10,7 @@ export default function HalHack() {
       <p>
         In total we had 200GB of data, so the only viable way to train the model was using multiple GPUs and resources on clusters provisioned by NCSA.
       </p>
-      <PdfLink href="/resources/hal_hack_slides.pdf">View slides (PDF)</PdfLink>
+      <PdfPreview href="/resources/hal_hack_slides.pdf" scale={0.8}>View slides (PDF)</PdfPreview>
     </>
   )
 }

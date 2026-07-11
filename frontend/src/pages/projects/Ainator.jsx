@@ -1,4 +1,4 @@
-import { PdfLink, ProjectVideo, VideoAside } from '../../components/projects/shared'
+import { ProjectVideo, VideoAside } from '../../components/projects/shared'
 
 export default function Ainator() {
   return (

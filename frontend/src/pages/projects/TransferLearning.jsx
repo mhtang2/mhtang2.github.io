@@ -1,4 +1,4 @@
-import { PdfLink } from '../../components/projects/shared'
+import PdfPreview from '../../components/PdfPreview'
 
 export default function TransferLearning() {
   return (
@@ -12,9 +12,9 @@ export default function TransferLearning() {
       </p>
       <p>The poster and final paper are linked below.</p>
       <h2>Poster</h2>
-      <PdfLink href="/resources/transfer_learning_poster.pdf">View poster (PDF)</PdfLink>
+      <PdfPreview href="/resources/transfer_learning_poster.pdf" scale={0.8}>View poster (PDF)</PdfPreview>
       <h2>Final paper</h2>
-      <PdfLink href="/resources/transfer_learning_writeup.pdf">View final paper (PDF)</PdfLink>
+      <PdfPreview href="/resources/transfer_learning_writeup.pdf" scale={0.8}>View final paper (PDF)</PdfPreview>
     </>
   )
 }

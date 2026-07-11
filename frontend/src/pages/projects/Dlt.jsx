@@ -1,4 +1,4 @@
-import { PdfLink } from '../../components/projects/shared'
+import PdfPreview from '../../components/PdfPreview'
 
 export default function Dlt() {
   return (
@@ -44,7 +44,7 @@ export default function Dlt() {
           </ul>
         </li>
       </ol>
-      <PdfLink href="/resources/dlt_hw1.pdf">View homework (PDF)</PdfLink>
+      <PdfPreview href="/resources/dlt_hw1.pdf" scale={0.8}>View homework (PDF)</PdfPreview>
     </>
   )
 }
